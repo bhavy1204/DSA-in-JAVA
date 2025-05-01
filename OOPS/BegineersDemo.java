@@ -23,6 +23,10 @@ abstract class Person {
         return this.name;
     }
 
+    public int getAge() {
+        return this.age;
+    }
+
     // Abstract method - must be implemented
     public abstract void display();
 }
