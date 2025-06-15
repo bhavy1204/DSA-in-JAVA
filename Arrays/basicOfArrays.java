@@ -27,7 +27,7 @@ public class basicOfArrays {
     // string linear search
     public static int stringLinearSearch(String arr[], String val) {
         for (int i = 0; i < arr.length; i++)
-            if(arr[i].equals(val)){
+            if (arr[i].equals(val)) {
                 return i;
             }
         return -1;
@@ -37,9 +37,27 @@ public class basicOfArrays {
     public static int largestInArray(int arr[]) {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++)
-            if (arr[i] >max)
-                max= arr[i];
+            if (arr[i] > max)
+                max = arr[i];
         return max;
+    }
+
+    // binary search
+    public static int binarySearch(int arr[], int val) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            if (arr[mid] == val)
+                return mid;
+            if (val < arr[mid])
+                end = mid - 1;
+            else
+                start = mid + 1;
+        }
+        return -1;
     }
 
     public static void main(String args[]) {
@@ -72,18 +90,20 @@ public class basicOfArrays {
         display(marks2);
 
         int idx = linearSearch(marks2, 11);
-        System.out.println("Found 11 at idx : "+idx);
+        System.out.println("Found 11 at idx : " + idx);
 
         input.nextLine();
 
-        String menu[] ={"samosa", "pavbhaji", "dosa" , "kachori"};
-        String key= input.nextLine();
+        String menu[] = { "samosa", "pavbhaji", "dosa", "kachori" };
+        String key = input.nextLine();
         idx = stringLinearSearch(menu, key);
         System.out.println(idx);
 
-        int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+        int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int largest = largestInArray(numbers);
-        System.out.println("\nLargest in array  : "+largest);
+        System.out.println("\nLargest in array  : " + largest);
+        idx = binarySearch(numbers, 7);
+        System.out.println("Found by BS : "+idx);
         input.close();
 
     }
