@@ -1,4 +1,6 @@
 public class DiagonalSum {
+    // Sum of primary diagonal = arr[i][j] >> i=j
+    // Sum of Secondary diagonal =  arr[i][j] >> i+j = arr.length -1;
     public static void diagonalSum(int arr[][]) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
