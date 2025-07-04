@@ -13,16 +13,22 @@ public class IncreasingDecreasingOrder {
         increasingPrint(n + 1);
     }
 
-    public static int fact(int n){
-        if(n<=1)
+    public static int fact(int n) {
+        if (n <= 1)
             return 1;
-        return n * fact(n-1);
+        return n * fact(n - 1);
+    }
+
+    public static int sumOfNum(int n){
+        if(n==1)
+            return 1;
+        return n + sumOfNum(n-1);
     }
 
     public static void main(String[] args) {
         decreasingPrint(10);
         increasingPrint(0);
-        System.out.println("\nFactorial : "+fact(5));
-        System.out.println("Sum : ");
+        System.out.println("\nFactorial : " + fact(5));
+        System.out.println("Sum : "+sumOfNum(5));
     }
 }
