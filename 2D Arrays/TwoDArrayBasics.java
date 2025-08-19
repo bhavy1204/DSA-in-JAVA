@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Basics {
+public class TwoDArrayBasics {
 
     public static void simple2DArray() {
         int arr[][] = new int[3][3];
