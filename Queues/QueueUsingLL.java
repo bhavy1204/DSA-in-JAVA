@@ -1,4 +1,4 @@
-public class Basics {
+public class QueueUsingLL {
 
     class Node {
         int data;
@@ -41,7 +41,7 @@ public class Basics {
     }
 
     public static void main(String[] args) {
-        Basics q = new Basics();
+        QueueUsingLL q = new QueueUsingLL();
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
