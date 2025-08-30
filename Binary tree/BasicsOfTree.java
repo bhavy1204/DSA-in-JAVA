@@ -16,7 +16,7 @@ public class BasicsOfTree {
     static class BuildTree {
         static int idx = -1;
 
-        public static Node buildTree(int nodes[]) {
+        public Node buildTree(int nodes[]) {
             idx++;
             if (nodes[idx] == -1) {
                 return null;
@@ -29,7 +29,7 @@ public class BasicsOfTree {
             return newNode;
         }
 
-        public static void preOrder(Node root) {
+        public void preOrder(Node root) {
             if (root == null) {
                 return;
             }
@@ -38,7 +38,7 @@ public class BasicsOfTree {
             preOrder(root.right);
         }
 
-        public static void postOrder(Node root) {
+        public void postOrder(Node root) {
             if (root == null) {
                 return;
             }
@@ -47,7 +47,7 @@ public class BasicsOfTree {
             System.out.print(root.data + " ");
         }
 
-        public static void inOrder(Node root) {
+        public void inOrder(Node root) {
             if (root == null) {
                 return;
             }
@@ -56,7 +56,7 @@ public class BasicsOfTree {
             inOrder(root.right);
         }
 
-        public static int height(Node root) {
+        public int height(Node root) {
             if (root == null) {
                 return 0;
             }
