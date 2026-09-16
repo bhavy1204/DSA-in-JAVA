@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Anagram {
     public static void main(String[] args) {
@@ -7,38 +8,38 @@ public class Anagram {
         // ====================================================================================
         // brute fiorce hashmaps
         // ====================================================================================
-        // Map<Character,Integer> freq1 = new HashMap<>();
-        // Map<Character,Integer> freq2 = new HashMap<>();
-        // for (Character ch : str.toCharArray()) {
-        // freq1.put(ch, freq1.getOrDefault(ch, 0)+1);
-        // }
-        // for (Character ch : str2.toCharArray()) {
-        // freq2.put(ch, freq2.getOrDefault(ch, 0)+1);
-        // }
-        // if (freq1.equals(freq2)) {
-        // System.out.println("Anagram");
-        // }else{
-        // System.out.println("Not anagrams");
-        // }
+        Map<Character, Integer> freq1 = new HashMap<>();
+        Map<Character, Integer> freq2 = new HashMap<>();
+        for (Character ch : str.toCharArray()) {
+            freq1.put(ch, freq1.getOrDefault(ch, 0) + 1);
+        }
+        for (Character ch : str2.toCharArray()) {
+            freq2.put(ch, freq2.getOrDefault(ch, 0) + 1);
+        }
+        if (freq1.equals(freq2)) {
+            System.out.println("Anagram");
+        } else {
+            System.out.println("Not anagrams");
+        }
 
         // ====================================================================================
         // better hashmaps
         // ====================================================================================
-        // Map<Character,Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();
 
-        // for (Character ch : str.toCharArray()) {
-        // map.put(ch, map.getOrDefault(ch, 0)+1);
-        // }
-        // for (Character ch : str2.toCharArray()) {
-        // map.put(ch, map.getOrDefault(ch, 0)-1);
-        // }
-        // for(int cnt:map.values()){
-        // if (cnt!=0) {
-        // System.out.println("Not anagram");
-        // return;
-        // }
-        // }
-        // System.out.println("Anagram");
+        for (Character ch : str.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        for (Character ch : str2.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) - 1);
+        }
+        for (int cnt : map.values()) {
+            if (cnt != 0) {
+                System.out.println("Not anagram");
+                return;
+            }
+        }
+        System.out.println("Anagram");
 
         // ====================================================================================
         // Sorting
@@ -77,7 +78,7 @@ public class Anagram {
         }
 
         for (int i : freq) {
-            if(i!=0){
+            if (i != 0) {
                 System.out.println("Not anagram");
                 return;
             }
@@ -87,15 +88,14 @@ public class Anagram {
     }
 }
 
-
 // int[] freq = new int[256];
 // for (int i = 0; i < str.length(); i++) {
-//     freq[str.charAt(i)]++;
-//     freq[str2.charAt(i)]--;
+// freq[str.charAt(i)]++;
+// freq[str2.charAt(i)]--;
 // }
 // for (int count : freq) {
-//     if (count != 0) {
-//         return false;
-//     }
+// if (count != 0) {
+// return false;
+// }
 // }
 // return true;
