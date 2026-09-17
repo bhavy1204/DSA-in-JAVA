@@ -89,6 +89,8 @@ public class One {
     public static void main(String[] args) {
         // reverse();
         // transpose();
-        minMax();
+        // minMax();
+        // sorted();
+        
     }
 }
