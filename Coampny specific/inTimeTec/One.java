@@ -79,11 +79,18 @@ public class One {
     }
 
     public static void firstRepeat() {
-        int arr[] = { 1, 4, 2, 2, 3, 4, 5 };
+        int arr[] = { 1, 2, 4, 2, 2, 3, 4, 5 };
 
         for (int i = 0; i < arr.length; i++) {
-            
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] == arr[i]) {
+                    System.out.println(arr[i]);
+                    return;
+                }
+            }
         }
+
+        System.out.println("None found");
     }
 
     public static void main(String[] args) {
@@ -91,6 +98,7 @@ public class One {
         // transpose();
         // minMax();
         // sorted();
-        
+        firstRepeat();
+
     }
 }

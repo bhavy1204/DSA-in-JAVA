@@ -4,11 +4,11 @@ public class InsertionSort {
 
     public static void insertionSort(int arr[]) {
         for (int i = 1; i < arr.length; i++) {
-            int key = i;
+            int key = arr[i];
             int j = i - 1;
 
             while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
+                arr[j + 1] = arr[j]; //shifting right
                 j -= 1;
             }
 
@@ -49,4 +49,23 @@ public class InsertionSort {
 // Stable → maintains the relative order of equal elements
 // Adaptive → performs efficiently on nearly sorted arrays
 // In-place → requires only constant extra memory
-// Online → can sort elements as they arrive without needing the complete dataset initially
+// Online → can sort elements as they arrive without needing the complete
+// dataset initially
+
+// Feature   Selection Sort  Insertion Sort
+// Best-Case TimeO(n²)O(n) (when already sorted)
+// Worst-Case TimeO(n²)O(n²)
+// Adaptive No (scans fully regardless of order) Yes (runs faster on nearly sorted data)
+// Stability Not stable by default StableSwaps/WritesFewer swaps (O(n))More shifts/writes
+
+// insertion sort
+// put the
+// selcted in correct position in
+// sorted part
+// and selection
+// sort find
+// smallest and
+// put at
+// first index
+// of unsorted
+// part
