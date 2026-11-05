@@ -2,6 +2,8 @@
 
 > A single-source-of-truth repo for Data Structures & Algorithms (DSA) practice — solved *famous* problems, organized by concept, with clear templates, tests, and notes. Made for learning, interviewing, and flexing algorithmic muscles. 💪
 
+It also contains coampny specific questions, striver's A2Z sheet and apna college DSA sheet as well. 
+
 ---
 
 ## 📌 Project Overview
